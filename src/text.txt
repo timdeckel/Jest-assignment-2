@@ -1,0 +1,41 @@
+My Guest Book Page! :)
+
+Header:
+    h1 - "Guest Book"
+    import Subtitle text to display the text
+
+Subtitle:
+    h3 - "Leave a message down below..."
+    export to Header component
+
+GuestList:
+    listItem - A prop passed into the component that holds an array of messages.
+    messages - This state keeps track of the current list of messages displayed
+    on the page. Initially, it is set to listItem, but it gets updated when new messages are added.
+        Components inside GuestList: 
+            NewMessage: 
+                This component includes an input field and a "Send" button.
+                When a user enters a message and clicks "Send", it triggers
+                the setMessage function to add the new message to the list.
+            List: 
+                Is responsible for rendering each individual message.
+                The map() function is used to loop through the messages 
+                array and render each message inside a styled container.
+
+NewMessage: 
+    useState: to be able to use the message och setMessage
+    input: To leave a message
+        here we also need an onChange to update the message variable
+    button: A button to send the message to its parent component with the onSend method. 
+
+List: 
+    useState true - handles the messages visability with help from isVisible
+        setIsVisible - is used to update if the message should be hidden or shown
+        useState false - handles if the message is set to important with the help of 
+        setImportant. This one sets the value of the message being important or unimportant.
+        And also a setShow that will hide the message or show the message. 
+    Button: to be able to toggle between the setIsVisible, setImportant and setShow with the
+    toggleVisibility function. 
+    Button: to toggle the importance of a message with the toggleImportant function.
+
+There are Images in the Image folder to show the function of the website more clearly!
