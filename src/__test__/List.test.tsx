@@ -26,7 +26,7 @@ test("Check if marking a message as important is reflected in the parent compone
 
     const listItem = screen.getByTestId("list-item");
     
-    expect(listItem).toHaveClass("bg-red-400");
+    expect(listItem).toHaveClass("bg-yellow-200");
  
     fireEvent.click(importantButton);
     
@@ -59,7 +59,7 @@ test("Clicking the Important button toggles the background color in the List com
 
     fireEvent.click(importantButton);
     
-    expect(listItem).toHaveClass("bg-red-400");
+    expect(listItem).toHaveClass("bg-yellow-200");
     expect(importantButton.textContent).toBe("Unimportant");
 
     fireEvent.click(importantButton);
@@ -85,7 +85,7 @@ test("That the message stays Important even if pressed as Hidden", () => {
     
     fireEvent.click(importantButton)
 
-    expect(listItem).toHaveClass("bg-red-400")
+    expect(listItem).toHaveClass("bg-yellow-200")
 
     messageElement = screen.queryByText("Testing testing")
     

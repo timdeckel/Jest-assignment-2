@@ -16,7 +16,7 @@ test("Check that the h1 element has correct class names", () => {
 
     const headerText = screen.getByRole("heading", { level: 1 });
     
-    expect(headerText).toHaveClass("text-4xl", "text-pink-500");
+    expect(headerText).toHaveClass("text-4xl", "font-bold", "text-pink-600", "mb-2", "tracking-wide");
 });
 
 test("Check that the SubTitle component is rendered within the Header", () => {
