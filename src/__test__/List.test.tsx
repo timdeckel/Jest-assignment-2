@@ -39,11 +39,11 @@ test("Clicking the Hide button toggles the message visibility in the List compon
     const toggleButton = screen.getByTestId("toggle-message");
     const messageElement = screen.getByText(mockMessage.message);
 
-    expect(messageElement).toBeInTheDocument(); // Initially visible
+    expect(messageElement).toBeInTheDocument(); 
     
     fireEvent.click(toggleButton);
 
-    expect(screen.queryByText(mockMessage.message)).not.toBeInTheDocument(); // Hidden
+    expect(screen.queryByText(mockMessage.message)).not.toBeInTheDocument(); 
     expect(toggleButton.textContent).toBe("Show");
 });
 
