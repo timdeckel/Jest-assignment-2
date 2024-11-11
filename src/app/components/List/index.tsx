@@ -18,10 +18,10 @@ const List = ({ id, message  }: ListProps) => {
   }
 
   return (
-    <div  className={important ? 'flex bg-yellow-200 p-2' : 'flex bg-pink-100 p-2'}>
-          <div className=' gap-8 flex items-center justify-between' key={id}>
-            <li className={hidden ? 'hidden': ''} >{message}</li>
-            <Button text='Hide' altText='Show' passedFunction={toggleContent} ></Button>
+    <div data-testid="list-item"  className={important ? 'flex bg-yellow-200 p-2' : 'flex bg-pink-100 p-2'}>
+          <div className=' gap-8 flex items-center justify-between text-black' key={id}>
+            <li className='list-none'>{!hidden ? message : ''}</li>
+            <Button text='Show' altText='Hide' passedFunction={toggleContent} ></Button>
             <Button text='Unimportant' altText='Important' passedFunction={toggleImportant} ></Button>
           </div>
     </div>

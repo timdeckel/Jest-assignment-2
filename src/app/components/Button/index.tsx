@@ -14,9 +14,9 @@ const Button = ({text , altText, passedFunction}: ButtonProps) => {
         passedFunction();
     }
 
-    if(text === 'Hide'){
+    if(text === 'Show'){
         return (
-            <button className={toggled ? 'p-2 bg-red-500' : 'p-2 bg-blue-500'} onClick={handleClick} >{toggled ? text: altText}</button>
+            <button data-testId="toggle-message" className={toggled ? 'p-2 bg-red-500' : 'p-2 bg-blue-500'} onClick={handleClick} >{toggled ? text: altText}</button>
           );
     } else {
         return (
