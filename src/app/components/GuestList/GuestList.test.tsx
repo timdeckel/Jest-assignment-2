@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react"
 import GuestList from "."
 import { ListType } from "../../../utils/types"
 import { send } from "process"
-import NewMessage from "../NewMessage";
+import NewMessage from "../NewMessage"
 
 const mockListItems: ListType[] = [
         {id: 1, message: "First message"},

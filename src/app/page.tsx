@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Header from "./components/Header"
+import GuestList from "./components/GuestList";
 export default function Home() {
   return (
     <div className="">
       <main className="">
-        <Header></Header>
+      <GuestList listItem={null}/>
       </main>
     </div>
   );
